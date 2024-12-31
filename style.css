@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #D32F2F; /* Red background */
+    color: white; /* White text for contrast */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light, opaque white for the container */
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px; /* Limit max width for responsiveness */
+    margin: 50px auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #FF6347; /* Bright red for the title */
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', sans-serif; /* Anime-style font */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Use fractional units for responsive columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.square {
+    background-color: #FFFFFF;
+    border: 2px solid #FF6347; /* Red border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    aspect-ratio: 1; /* Ensures the width and height are always equal, making it square */
+    width: 100%; /* Ensures the square takes up the available width in the grid */
+    max-width: 120px; /* Optionally, you can limit the max size of the square */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    overflow: hidden; /* Ensures that any part of the image overflowing the square is clipped */
+}
+
+.square:hover {
+    background-color: #FF6347; /* Red background on hover */
+}
+
+.square img {
+    width: 100%; /* Ensures the image takes up the full width */
+    height: 100%; /* Ensures the image takes up the full height */
+    object-fit: cover; /* Ensures the image covers the entire square without distortion */
+    border-radius: 10px; /* Optional, if you want rounded corners for the image */
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #FF6347;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button width responsive */
+    max-width: 200px; /* Limit max width of the button */
+}
+
+button:hover {
+    background-color: #FF4500; /* Darker red on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+}
